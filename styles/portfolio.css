@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+}
+
+#left-side{
+    background-color: #2F3148;
+    padding: 30px;
+}
+
+#right-side{
+    background: url('../sundar.webp');
+}
+
+.box{
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+}
+
+.text{
+    color: #E2978F;
+}
+
+#burger-img{
+    width: 60px;
+    padding: 10px;
+    background-color: #E2978F;
+    border-radius: 50%;
+}
+
+#btn{
+    border-radius: 20px;
+    border: 3px solid #E2978F;
+    /* border-width: 5px;
+    border-color: #E2978F;
+    border-style: solid; */
+    padding: 5px;
+    background-color: #2F3148;
+}

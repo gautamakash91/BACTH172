@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <input id="task" />
+        <button onclick="addTask()">add task</button>
+
+        <ol id="list">   
+        </ol>
+
+        <script>
+            var a = "";
+            function addTask(){
+                var text = document.getElementById("task").value;
+                //concatenate 
+                a = a + "<li>"+text+"</li>";
+                document.getElementById("list").innerHTML = a;
+            }
+        </script>
+    </body>
+</html>
