@@ -4,15 +4,17 @@ body{
 
 #left-side{
     background-color: #2F3148;
-    padding: 30px;
+    padding: 1%;
+    width: 47%;
 }
 
 #right-side{
     background: url('../sundar.webp');
+    background-size: cover;
+    width: 49%;
 }
 
 .box{
-    width: 49%;
     height: 100%;
     display: inline-block;
 }

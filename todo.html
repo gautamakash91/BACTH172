@@ -1,18 +1,35 @@
 <html>
+    <head>
+        <style>
+            #container{
+                background-color: red;
+            }
+        </style>
+    </head>
     <body>
-        <input id="task" />
-        <button onclick="addTask()">add task</button>
+        <div id="container">
+            <input id="task" oninput="handleInput()" />
+            <button id="task-btn" onclick="addTask()">add task</button>
 
-        <ol id="list">   
-        </ol>
-
+            <ol id="list">   
+            </ol>
+        </div>
         <script>
             var a = "";
             function addTask(){
                 var text = document.getElementById("task").value;
-                //concatenate 
-                a = a + "<li>"+text+"</li>";
-                document.getElementById("list").innerHTML = a;
+                //concatenate
+                if(text != ""){
+                    a = a + "<li>"+text+"<button>X</button></li>";
+                    document.getElementById("list").innerHTML = a;
+                    document.getElementById("task").value = "";
+                    document.getElementById("container").style.backgroundColor = "green";
+                }
+            }
+
+            function handleInput(){
+                // document.getElementById("task-btn").disabled = true;
+
             }
         </script>
     </body>
