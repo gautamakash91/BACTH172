@@ -9,13 +9,23 @@
     <body>
         <div id="container">
             <input id="task" oninput="handleInput()" />
-            <button id="task-btn" onclick="addTask()">add task</button>
-
+            <button id="task-btn" onclick="addTaskNew()">add task</button>
+            <button onclick="prompt()">open prompt</button>
             <ol id="list">   
             </ol>
         </div>
         <script>
             var a = "";
+            var arr = [];
+            function addTaskNew(){
+                var text = document.getElementById("task").value;
+                //concatenate
+                if(text != ""){
+                    arr.push("<li>"+text+" <button>edit</button> <button onclick='deleteTask("+arr.length+")'>X</button></li>");
+                }
+                document.getElementById("list").innerHTML = arr.toString();
+            }
+
             function addTask(){
                 var text = document.getElementById("task").value;
                 //concatenate
@@ -27,9 +37,9 @@
                 }
             }
 
-            function handleInput(){
-                // document.getElementById("task-btn").disabled = true;
-
+            function deleteTask(index){
+                arr.splice(index, 1);
+                document.getElementById("list").innerHTML = arr.toString();
             }
         </script>
     </body>
